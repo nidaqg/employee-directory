@@ -1,0 +1,7 @@
+.localBtn {
+    background-color: rgb(114, 33, 46);
+}
+
+.localBtn:hover {
+    background-color: rgb(150, 56, 72);
+}
