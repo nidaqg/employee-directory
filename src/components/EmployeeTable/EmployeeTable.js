@@ -33,7 +33,7 @@ render() {
         
         <TableDetail
         id={result.login.uuid}
-        image={result.picture.thumbnail}
+        image={result.picture.medium}
        first= {result.name.first}
        last= {result.name.last}
        email= {result.email}
