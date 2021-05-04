@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import APIcalls from '../../utils/APIcalls';
 import TableDetail from '../TableDetail/TableDetail';
 import SearchBar from '../SearchBar/SearchBar';
+import './style.css';
 
 class EmployeeTable extends Component {
 state = {
@@ -25,20 +26,28 @@ handleInputChange = (e) => {
 //handle button click
 handleSearch = (e) => {
   e.preventDefault();
-  
+  console.log("search: "+ this.state.search)
 }
 
 //render the table
 render() {
     return (
       <div>
-      <SearchBar/>
+      <SearchBar
+      search={this.state.search}
+      handleInputChange={this.handleInputChange}
+      handleSearch={this.handleSearch}
+      />
         <div className="mt-4 table-responsive">
            <table className="table table-striped">
   <thead>
     <tr>
       <th scope="col">Profile</th>
-      <th scope="col">First Name</th>
+      <th scope="col" 
+          onClick={()=> console.log("hello")}
+          className="sortBtn">
+          First Name
+        </th>
       <th scope="col">Last Name</th>
       <th scope="col">Email</th>
     </tr>
@@ -46,7 +55,14 @@ render() {
 
   <tbody>
     
-      {this.state.list.map(result => (
+      {this.state.list.filter((list)=> {
+        if(!this.state.search) {
+          return list
+        } else if (list.name.first.toLowerCase().includes(this.state.search.toLowerCase())) {
+          return list
+        }
+      })
+      .map(result => (
         
         <TableDetail
         id={result.login.uuid}
