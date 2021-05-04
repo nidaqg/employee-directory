@@ -1,10 +1,10 @@
 import React from 'react';
 import "./style.css";
 
-export default function NavBar(props) {
+export default function SearchBar(props) {
     return (
-            <nav className="navbar navbar-dark bg-dark">
-                <div className="container-fluid justify-content-end">
+                <div className="mt-3 w-50">
+
                     <form className="d-flex">
                         <input 
                         name="name-search"
@@ -15,9 +15,9 @@ export default function NavBar(props) {
                         type="search" 
                         placeholder="Search by Name" 
                         aria-label="Search"/>
-                            <button className="btn localBtn btn-light ml-2" type="submit" onClick={props.handleSearch}>Search</button>
+                            <button className="btn localBtn btn-dark ml-2" type="submit" onClick={props.handleSearch}>Search</button>
                    </form>
+
                </div>
-           </nav>  
     )
 }

@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import APIcalls from '../../utils/APIcalls';
 import TableDetail from '../TableDetail/TableDetail';
+import SearchBar from '../SearchBar/SearchBar';
 
 class EmployeeTable extends Component {
 state = {
-    list : []
+    list : [],
+    search: ""
 };
 
+//API call everytime the page loads
 componentDidMount () {
     APIcalls.getEmployees()
     .then(res => 
@@ -14,9 +17,23 @@ componentDidMount () {
     .catch(err => console.log(err));
 };
 
+//handle input change
+handleInputChange = (e) => {
+  this.setState({search:e.target.value});
+};
+
+//handle button click
+handleSearch = (e) => {
+  e.preventDefault();
+  
+}
+
+//render the table
 render() {
     return (
-        <div className="mt-5 table-responsive">
+      <div>
+      <SearchBar/>
+        <div className="mt-4 table-responsive">
            <table className="table table-striped">
   <thead>
     <tr>
@@ -38,14 +55,12 @@ render() {
        last= {result.name.last}
        email= {result.email}
       />
-      
       ))}
     
-         
-   
-   
+  
   </tbody>
 </table> 
+        </div>
         </div>
     )
 }

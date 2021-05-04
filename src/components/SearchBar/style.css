@@ -5,3 +5,6 @@
 .localBtn:hover {
     background-color: rgb(150, 56, 72);
 }
+.localBtn:focus {
+    outline: 0;
+}
