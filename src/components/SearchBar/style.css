@@ -1,9 +1,5 @@
-.localBtn {
-    background-color: rgb(114, 33, 46);
-}
-
 .localBtn:hover {
-    background-color: rgb(150, 56, 72);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .localBtn:focus {
     outline: 0;
