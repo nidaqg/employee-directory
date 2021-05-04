@@ -58,7 +58,8 @@ render() {
       {this.state.list.filter((list)=> {
         if(!this.state.search) {
           return list
-        } else if (list.name.first.toLowerCase().includes(this.state.search.toLowerCase())) {
+        } 
+        else if (list.name.first.toLowerCase().includes(this.state.search.toLowerCase()) || list.name.last.toLowerCase().includes(this.state.search.toLowerCase())) {
           return list
         }
       })
