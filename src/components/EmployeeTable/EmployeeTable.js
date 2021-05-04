@@ -16,7 +16,7 @@ componentDidMount () {
 
 render() {
     return (
-        <div>
+        <div className="mt-5 table-responsive">
            <table className="table table-striped">
   <thead>
     <tr>
