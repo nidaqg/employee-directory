@@ -26,7 +26,7 @@ handleInputChange = (e) => {
 //handle button click
 handleSearch = (e) => {
   e.preventDefault();
-  console.log("search: "+ this.state.search)
+  console.log("searched term: "+ this.state.search)
 }
 
 //render the table
@@ -43,11 +43,13 @@ render() {
   <thead>
     <tr>
       <th scope="col">Profile</th>
-      <th scope="col" 
-          onClick={()=> console.log("hello")}
+
+      <th scope="col"
+          onClick={()=> console.log("hello") }
           className="sortBtn">
           First Name
         </th>
+
       <th scope="col">Last Name</th>
       <th scope="col">Email</th>
     </tr>

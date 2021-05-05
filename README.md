@@ -1,25 +1,75 @@
 # Employee Directory
 A REACT employee directory
 
-## Overview
+![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)
+![badge](https://img.shields.io/badge/license-MIT-orange)
 
-For this assignment, you'll create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
+## Description
+
+A simple React application that displays an employee directory and allows users to search by name or sort the table alphabetically. User data has been pulled from the [Random User API](https://randomuser.me/).
 
 ## User Story
 
-* As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
+As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
 
 ## Business Context
 
 An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
 
-## Acceptance Criteria
+## Table of Contents
 
-Given a table of random users generated from the [Random User API](https://randomuser.me/), when the user loads the page, a table of employees should render. 
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing Guidelines](#contributing)
+* [License](#license)
+* [Questions](#questions)
 
-The user should be able to:
+## Installation
 
-  * Sort the table by at least one category
+This application was created using React and it's class based approach. It was deployed using Heroku and the deployed application can be viewed here:
 
-  * Filter the users by at least one property.
+
+## Usage
+
+When the user navigates to the page they are presented with a table of employees listing names, emails and profile pictures.The user can view the table as is or search by name.The user can also click the name header to sort the table alphabetically. 
+
+## Contributing
+
+ ![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)
+
+ Link to Contributor's Covenant:[Contributors Covenant](https://www.contributor-covenant.org/version/2/0/code_of_conduct/) 
+
+ 
+## License
+
+![badge](https://img.shields.io/badge/license-MIT-orange)
+   
+Copyright (c) [2021] [Nida Ghuman]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. 
+
+## Questions
+
+The repo for this project can be found here: https://github.com/nidaqg/employee-directory
+
+Heroku link for deployed project can be found at: 
+
+For any questions or to report issues, email me at: nidaqg@gmail.com
+
 
