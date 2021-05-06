@@ -26,7 +26,7 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 
 ## Installation
 
-This application was created using React and it's class based approach. It was deployed using Heroku and the deployed application can be viewed here:
+This application was created using React and it's class based approach. It was deployed using GH pages and the deployed application can be viewed here: https://nidaqg.github.io/employee-directory/
 
 
 ## Usage
@@ -68,7 +68,7 @@ SOFTWARE.
 
 The repo for this project can be found here: https://github.com/nidaqg/employee-directory
 
-Heroku link for deployed project can be found at: 
+Deployed project can be found at: https://nidaqg.github.io/employee-directory/
 
 For any questions or to report issues, email me at: nidaqg@gmail.com
 
