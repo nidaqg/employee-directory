@@ -17,12 +17,12 @@ componentDidMount () {
     APIcalls.getEmployees()
     .then(res => 
       this.setState({list:res.data.results}))
-    //.catch(err => console.log(err));
+    .catch(err => console.log(err));
 };
 
 //handle input change
 handleInputChange = (e) => {
-  this.setState({search:e.target.value, isFiltered:true});
+  this.setState({search:e.target.value});
 };
 
 //handle button click
@@ -31,16 +31,25 @@ handleSearch = (e) => {
   console.log("searched term: "+ this.state.search)
 }
 
+//sorter function to sort in ascending order or descending order depending on what order it is currently in
 sorter= (e,property)=> {
   console.log(property)
+  if(!this.state.ifSorted) {
   const sorted = this.state.list.sort(function (a, b) {
     if (a[property].toLowerCase() < b[property].toLowerCase()) { return -1; }
     if (a[property].toLowerCase() > b[property].toLowerCase()) { return 1; }
     return 0;
   })
-   console.log(sorted)
    this.setState({list:sorted, ifSorted:true})
+  } else {
+    const sorted = this.state.list.sort(function (a, b) {
+      if (a[property].toLowerCase() < b[property].toLowerCase()) { return -1; }
+      if (a[property].toLowerCase() > b[property].toLowerCase()) { return 1; }
+      return 0;
+    }).reverse()
+     this.setState({list:sorted, ifSorted:false})
 
+  }
 }
 
 //render the table
@@ -65,7 +74,11 @@ render() {
         </th>
 
       <th scope="col">Last Name</th>
-      <th scope="col">Email</th>
+      <th scope="col"
+      onClick={e => this.sorter(e,"email")}
+      className="sortBtn">
+      Email
+      </th>
     </tr>
   </thead>
 
