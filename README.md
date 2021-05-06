@@ -31,7 +31,9 @@ This application was created using React and it's class based approach. It was d
 
 ## Usage
 
-When the user navigates to the page they are presented with a table of employees listing names, emails and profile pictures.The user can view the table as is or search by name.The user can also click the name header to sort the table alphabetically. 
+When the user navigates to the page they are presented with a table of employees listing names, emails and profile pictures.The user can view the table as is or search by name.The user can also click the first name or email header to sort the table alphabetically. 
+
+![demo](demo.png)
 
 ## Contributing
 
